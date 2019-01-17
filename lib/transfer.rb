@@ -28,5 +28,9 @@ class Transfer
       end
   end
 
+  def reverse_transfer
+      rev_trans = Transfer.new(receiver, sender, amount).tap{|transfer| transfer.execute_transaction}
+  end
+
 
 end
