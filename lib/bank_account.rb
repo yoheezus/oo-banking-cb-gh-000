@@ -15,7 +15,7 @@ class BankAccount
     end
 
     def display_balance
-        self.balance
+        "Your balance is $#{self.balance}"
     end
 
     def valid?
