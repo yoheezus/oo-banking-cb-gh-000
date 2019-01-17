@@ -29,7 +29,10 @@ class Transfer
   end
 
   def reverse_transfer
-      rev_trans = Transfer.new(receiver, sender, amount).tap{|transfer| transfer.execute_transaction}
+      rev_trans = Transfer.new(receiver, sender, amount).tap do |transfer|
+          transfer.execute_transaction
+          transfer.status = "reversed"
+      end
   end
 
 
