@@ -20,6 +20,8 @@ class Transfer
           self.sender.balance =- amount
           self.receiver.balance =+ amount
           @amt_transferred = amount
+          self.status = "done"
+      end
 
 
 end
