@@ -22,6 +22,7 @@ class Transfer
           @amt_transferred = amount
           self.status = "done"
       end
+  end
 
 
 end
