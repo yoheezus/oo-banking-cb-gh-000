@@ -16,11 +16,9 @@ class Transfer
   end
 
   def execute_transaction
-      @amt_transferred = 0
       if valid? && self.status == "pending" && (self.sender.balance - amount) >= 0
           self.sender.balance -= amount
           self.receiver.balance += amount
-          @amt_transferred = amount
           self.status = "complete"
       else
           self.status = "rejected"
