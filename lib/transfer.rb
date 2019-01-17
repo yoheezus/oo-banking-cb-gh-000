@@ -21,6 +21,8 @@ class Transfer
           self.receiver.balance =+ amount
           @amt_transferred = amount
           self.status = "done"
+      else
+          "Transaction rejected. Please check your account balance."
       end
   end
 
