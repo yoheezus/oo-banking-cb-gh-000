@@ -24,6 +24,7 @@ class BankAccount
         else
             self.close_account
             false
+        end
     end
 
     def close_account
